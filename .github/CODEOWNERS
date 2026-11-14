@@ -1,0 +1,13 @@
+# i40-SAFTCH CODEOWNERS
+
+README.md @merlinseela
+
+# Contributing and Templates
+CONTRIBUTING.md @merlinseela
+.github/ISSUE_TEMPLATE/* @merlinseela
+.gitignore @merlinseela
+
+# Legal, Licensing and Citation
+LICENSE @merlinseela
+NOTICE @merlinseela
+CITATION.cff @merlinseela
