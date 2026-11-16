@@ -1,0 +1,39 @@
+name: Pull request title
+
+on:
+  pull_request_target:
+    branches: [testing, main]
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  validate:
+    name: Conventional PR title
+    runs-on: ubuntu-latest
+    steps:
+      # This runs on the base workflow and reads PR metadata only.
+      - uses: amannn/action-semantic-pull-request@2252a14e810aa9b85c2d560bd7070c802206ecf6 # v6.1.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+          scopes: |
+            edge
+            ssot
+            docs
+            github
+            repo
+            ci
+          requireScope: false

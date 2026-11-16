@@ -23,4 +23,13 @@ To ensure our automated changelog generation works correctly across the SAFTCH m
 The scope indicates the specific part of the framework your pull request modifies. Please use one of the following standard scopes:
 - **`edge`** - Changes related to the hardware edge nodes or edge daemon.
 - **`ssot`** - Changes related to the Single Source of Truth, proxy server, or API.
+- **`docs`** - Changes to documentation and examples.
+- **`github`** - Changes to GitHub issue templates and repository metadata.
 - **`repo`** - Global changes that affect the entire repository (e.g., license updates, global `.gitignore`).
+- **`ci`** - Changes to automated checks and build workflows.
+
+## Pull Request Check
+
+The **Conventional PR title** check runs when a pull request to `testing` or `main` is opened, updated, or reopened. A scope is optional. If you use one, use a scope from the list above.
+
+Once the workflow is present on a protected base branch, a maintainer can add this check to that branch's required status checks.
