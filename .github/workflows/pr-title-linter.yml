@@ -32,8 +32,5 @@ jobs:
           scopes: |
             edge
             ssot
-            docs
-            github
             repo
-            ci
           requireScope: false
